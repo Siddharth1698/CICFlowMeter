@@ -1,6 +1,7 @@
 ## Install jnetpcap local repo
 
 for linux, sudo is a prerequisite
+
 ```
 //linux :at the pathtoproject/jnetpcap/linux/jnetpcap-1.4.r1425
 //windows: at the pathtoproject/jnetpcap/win/jnetpcap-1.4.r1425
@@ -8,8 +9,11 @@ mvn install:install-file -Dfile=jnetpcap.jar -DgroupId=org.jnetpcap -DartifactId
 ```
 
 ## Run
+
 ### IntelliJ IDEA
+
 open a Terminal in the IDE
+
 ```
 //linux:
 $ sudo bash
@@ -30,9 +34,11 @@ $ gradlew execute
    3. Copy libjnetpcap.so and libjnetpcap-pcap100.so in /usr/lib/ (as sudo).
 
 ```
+
 ### Eclipse
 
 Run eclipse with sudo
+
 ```
 1. Right click App.java -> Run As -> Run Configurations -> Arguments -> VM arguments:
 -Djava.library.path="pathtoproject/jnetpcap/linux/jnetpcap-1.4.r1425"  -> Run
@@ -44,18 +50,24 @@ Run eclipse with sudo
 ## Make package
 
 ### IntelliJ IDEA
+
 open a Terminal in the IDE
+
 ```
 //linux:
 $ gradle distZip
 //window
 $ gradlew distZip
 ```
+
 the zip file will be in the pathtoproject/CICFlowMeter/build/distributions
 
 ### Eclipse
+
 At the project root
+
 ```
 mvn package
 ```
+
 the jar file will be in the pathtoproject/CICFlowMeter/target
